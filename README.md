@@ -50,21 +50,3 @@ inside your page's <body> tag, and then add this where you want the banner to be
   </body>
 </html>
 ```
-
-This will render the banner like this:
-
- <body>
-    <webring-banner
-      host-name="runesong.neocities" title="Totally Awesome Dungeon Synth Webring" open-new>
-    </webring-banner>
-    <script type="module" src="https://toni-lappalainen.github.io/dswebring/index.js"></script>
-  </body>
-
-Or with the `banner="nick"` attribute:
-
- <body>
-    <webring-banner
-      host-name="runesong.neocities" title="Totally Awesome Dungeon Synth Webring" open-new banner="nick">
-    </webring-banner>
-    <script type="module" src="https://toni-lappalainen.github.io/dswebring/index.js"></script>
-  </body>

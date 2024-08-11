@@ -3,7 +3,7 @@ import {
   html,
   css,
 } from 'https://cdn.jsdelivr.net/gh/lit/dist@3/core/lit-core.min.js';
-
+/*
 export let members = [
   {
     name: 'desolationplains.neocities',
@@ -22,6 +22,9 @@ export let members = [
     url: 'https://hjartans.neocities.org/',
   },
 ];
+*/
+
+import { members } from './all/allsites.js';
 
 let info, title, target, links, isChecked;
 
@@ -149,7 +152,7 @@ export class WebringBanner extends LitElement {
         <div class="info-link">
           <a
             target="_blank"
-            href="https://myrrys.net/ds/webring"
+            href="https://github.com/toni-lappalainen/dswebring"
             class="info-link"
             >Webring Info</a
           >

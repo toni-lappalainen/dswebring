@@ -122,7 +122,6 @@ export class WebringBanner extends LitElement {
   render() {
     const bannerStyle = this.getAttribute('banner') || 'default';
     isChecked = JSON.parse(localStorage.getItem('openInTab'));
-    hostName = this.getAttribute('host-name') || 'default';
     title = this.getAttribute('title') || 'Member of the Dungeon Synth Webring';
     target = '_self';
 

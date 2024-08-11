@@ -35,6 +35,10 @@ export const members = [
     name: 'dungeon-synth.neocities',
     url: 'https://dungeon-synth.neocities.org/',
   },
+  {
+    name: 'woodenvessels.neocities',
+    url: 'https://woodenvessels.neocities.org/',
+  },
 ];
 
 const app = document.querySelector('#site-list');

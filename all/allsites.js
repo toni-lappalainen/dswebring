@@ -1,4 +1,4 @@
-export let members = [
+export const members = [
   {
     name: 'desolationplains.neocities',
     url: 'https://desolationplains.neocities.org/',
@@ -42,7 +42,7 @@ if (app) {
   for (const member of members) {
     const site = document.createElement('li');
     site.innerHTML = `
-    <a href="${member.url}">${member.name}</a>
+    <a href="${member.url}">${member.url}</a>
   `;
 
     app.appendChild(site);

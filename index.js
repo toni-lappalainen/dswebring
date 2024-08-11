@@ -7,7 +7,12 @@ import {
 let ghurl = 'https://github.com/toni-lappalainen/';
 import { members } from './all/allsites.js';
 
-let info, title, target, links, isChecked;
+let info,
+  title,
+  target,
+  links,
+  isChecked,
+  bg = '#e4d9c3';
 
 const getCurrentURL = () => {
   return window.location.href;
@@ -94,6 +99,7 @@ export class WebringBanner extends LitElement {
 
   render() {
     const bannerStyle = this.getAttribute('banner') || 'default';
+    bg = this.getAttribute('bg') || '#e4d9c3';
     isChecked = JSON.parse(localStorage.getItem('openInTab'));
     title = this.getAttribute('title') || 'Member of the Dungeon Synth Webring';
     target = '_self';
@@ -136,11 +142,7 @@ export class WebringBanner extends LitElement {
             class="info-link"
             >Webring Info</a
           >
-          <a
-            target="_blank"
-            href="https://toni-lappalainen.github.io/dswebring/all"
-            >All Sites</a
-          >
+          <a target="_blank" href="./all">All Sites</a>
         </div>
         <div>
           <label for="opentab">
@@ -322,8 +324,7 @@ const simpleBanner = () => {
   return html`
     <style>
       .banner-simple {
-        background: #e4d9c3;
-        border: 2px solid black;
+        background: ${bg};
         text-align: center;
         font: 100% system-ui, sans-serif;
         padding-bottom: 8px;

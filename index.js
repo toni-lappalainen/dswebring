@@ -75,6 +75,8 @@ export const getSite = (arg) => {
   return redirUrl;
 };
 
+const getData = () => {};
+
 export class WebringBanner extends LitElement {
   static styles = css`
     :host {
@@ -161,8 +163,8 @@ export class WebringBanner extends LitElement {
       return nickBanner();
     } else if (bannerStyle === 'simple') {
       return simpleBanner();
-    } else if (bannerStyle === 'minimal') {
-      return minimalBanner();
+    } else if (bannerStyle === 'custom') {
+      return customBanner();
     } else {
       return defaultBanner();
     }
@@ -350,33 +352,26 @@ const simpleBanner = () => {
     </style>
     <div class="banner-simple">
       <div class="title">${title}</div>
-      <div class="container">
-        <div class="content">
-          <div class="links">
-            <a href="${links.prev}" target="${target}"> [Prev]</a>
-            <a href="${links.random}" target="${target}"> [Random]</a>
-            <a href="${links.next}" target="${target}">[Next]</a>
-          </div>
-          ${info}
+      <div class="content">
+        <div class="links">
+          <a href="${links.prev}" target="${target}"> [Prev]</a>
+          <a href="${links.random}" target="${target}"> [Random]</a>
+          <a href="${links.next}" target="${target}">[Next]</a>
         </div>
+        ${info}
       </div>
     </div>
   `;
 };
 
-const minimalBanner = () => {
+const customBanner = () => {
   return html`
-    <style>
-      ${style}
-    </style>
-    <div class="content">
-      <div class="links">
-        <a href="${links.prev}" target="${target}"> [Prev]</a>
-        <a href="${links.random}" target="${target}"> [Random]</a>
-        <a href="${links.next}" target="${target}">[Next]</a>
-      </div>
-      ${info}
+    <div class="links">
+      <a href="${links.prev}" target="${target}"> [Prev]</a>
+      <a href="${links.random}" target="${target}"> [Random]</a>
+      <a href="${links.next}" target="${target}">[Next]</a>
     </div>
+    ${info}
   `;
 };
 

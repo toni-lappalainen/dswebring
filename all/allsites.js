@@ -18,11 +18,13 @@ export let members = [
 ];
 
 const app = document.querySelector('#site-list');
-for (const member of members) {
-  const site = document.createElement('li');
-  site.innerHTML = `
+if (app) {
+  for (const member of members) {
+    const site = document.createElement('li');
+    site.innerHTML = `
     <a href="${member.url}">${member.name}</a>
   `;
 
-  app.appendChild(site);
+    app.appendChild(site);
+  }
 }

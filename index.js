@@ -6,12 +6,7 @@ import {
 
 import { members } from './all/allsites.js';
 
-let info,
-  title,
-  target,
-  links,
-  isChecked,
-  bg = '#e4d9c3';
+let info, title, target, links, isChecked, bg, style;
 
 const getCurrentURL = () => {
   return window.location.href;
@@ -99,6 +94,7 @@ export class WebringBanner extends LitElement {
   render() {
     const bannerStyle = this.getAttribute('banner') || 'default';
     bg = this.getAttribute('bg') || '#e4d9c3';
+    style = this.getAttribute('style') || '';
     isChecked = JSON.parse(localStorage.getItem('openInTab'));
     title = this.getAttribute('title') || 'Member of the Dungeon Synth Webring';
     target = '_self';
@@ -141,7 +137,11 @@ export class WebringBanner extends LitElement {
             class="info-link"
             >Webring Info</a
           >
-          <a target="_blank" href="./all">All Sites</a>
+          <a
+            target="_blank"
+            href="https://toni-lappalainen.github.io/dswebring/all/"
+            >All Sites</a
+          >
         </div>
         <div>
           <label for="opentab">
@@ -161,6 +161,8 @@ export class WebringBanner extends LitElement {
       return nickBanner();
     } else if (bannerStyle === 'simple') {
       return simpleBanner();
+    } else if (bannerStyle === 'minimal') {
+      return minimalBanner();
     } else {
       return defaultBanner();
     }
@@ -288,7 +290,7 @@ const nickBanner = () => {
       <table cellspacing="5" style="font-size: 12pt; width: 500px;">
         <tbody>
           <tr>
-            <td colspan="100%" class="title">${title} ${info}</td>
+            <td colspan="100" class="title">${title} ${info}</td>
           </tr>
           <tr style="text-align: center" class="links">
             <td>
@@ -348,7 +350,6 @@ const simpleBanner = () => {
     </style>
     <div class="banner-simple">
       <div class="title">${title}</div>
-
       <div class="container">
         <div class="content">
           <div class="links">
@@ -359,6 +360,22 @@ const simpleBanner = () => {
           ${info}
         </div>
       </div>
+    </div>
+  `;
+};
+
+const minimalBanner = () => {
+  return html`
+    <style>
+      ${style}
+    </style>
+    <div class="content">
+      <div class="links">
+        <a href="${links.prev}" target="${target}"> [Prev]</a>
+        <a href="${links.random}" target="${target}"> [Random]</a>
+        <a href="${links.next}" target="${target}">[Next]</a>
+      </div>
+      ${info}
     </div>
   `;
 };

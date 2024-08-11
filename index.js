@@ -158,6 +158,8 @@ export class WebringBanner extends LitElement {
 
     if (bannerStyle === 'nick') {
       return nickBanner();
+    } else if (bannerStyle === 'simple') {
+      return simpleBanner();
     } else {
       return defaultBanner();
     }
@@ -312,6 +314,53 @@ const nickBanner = () => {
           </tr>
         </tbody>
       </table>
+    </div>
+  `;
+};
+
+const simpleBanner = () => {
+  return html`
+    <style>
+      .banner-simple {
+        background: #e4d9c3;
+        border: 15px solid #bba67c;
+        border-top-color: #666;
+        border-left-color: #666;
+        text-align: center;
+        font: 100% system-ui, sans-serif;
+        padding-bottom: 8px;
+      }
+      .title {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        padding: 8px;
+      }
+      .links {
+        font-size: 20px;
+      }
+      .container {
+        display: flex; /* or inline-flex */
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      .content {
+        flex-direction: column;
+      }
+    </style>
+    <div class="banner-simple">
+      <div class="title">${title}</div>
+
+      <div class="container">
+        <div class="content">
+          <div class="links">
+            <a href="${links.prev}" target="${target}"> [Prev]</a>
+            <a href="${links.random}" target="${target}"> [Random]</a>
+            <a href="${links.next}" target="${target}">[Next]</a>
+          </div>
+          ${info}
+        </div>
+      </div>
     </div>
   `;
 };

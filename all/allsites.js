@@ -40,6 +40,9 @@ export const members = [
 const app = document.querySelector('#site-list');
 if (app) {
   for (const member of members) {
+    if (member.name === 'self.github') {
+      continue;
+    }
     const site = document.createElement('li');
     site.innerHTML = `
     <a href="${member.url}">${member.url}</a>

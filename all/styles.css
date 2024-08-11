@@ -7,11 +7,19 @@ div {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  text-align: center;
+}
+
+h1 {
+  color: rgb(182, 94, 229);
+  text-align: center;
+  margin: 2rem 0 4rem;
 }
 
 a {
   color: #fa0000;
   transition: color 0.1s;
+  font-size: 1.4rem;
 
   &:hover {
     color: #db0000;
@@ -19,5 +27,17 @@ a {
 
   &:active {
     color: #fa0000;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  h1 {
+    margin: 1rem 0;
+  }
+  div {
+    text-align: left;
+  }
+  a {
+    font-size: 1.2rem;
   }
 }

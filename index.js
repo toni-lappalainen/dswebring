@@ -4,7 +4,6 @@ import {
   css,
 } from 'https://cdn.jsdelivr.net/gh/lit/dist@3/core/lit-core.min.js';
 
-let ghurl = 'https://github.com/toni-lappalainen/';
 import { members } from './all/allsites.js';
 
 let info,

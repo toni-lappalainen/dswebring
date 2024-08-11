@@ -58,7 +58,6 @@ const getDomain = (url) => {
 export const getSite = (arg) => {
   const host = getCurrentURL();
   const action = arg;
-
   const currentMember = members.find((member) => member.url.includes(host));
 
   let redirUrl = '#';
@@ -317,4 +316,5 @@ const nickBanner = () => {
   `;
 };
 
-customElements.define('webring-banner', WebringBanner);
+if (!customElements.get('webring-banner'))
+  customElements.define('webring-banner', WebringBanner);

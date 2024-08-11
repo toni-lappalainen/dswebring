@@ -29,7 +29,7 @@ export let members = [
   },
   {
     name: 'self.github',
-    url: 'https://toni-lappalainen.github.io/dswebring',
+    url: 'https://toni-lappalainen.github.io/dswebring/',
   },
   {
     name: 'dungeon-synth.neocities',

@@ -4,7 +4,7 @@ import {
   css,
 } from 'https://cdn.jsdelivr.net/gh/lit/dist@3/core/lit-core.min.js';
 
-let members = [
+export let members = [
   {
     name: 'desolationplains.neocities',
     url: 'https://desolationplains.neocities.org/',
@@ -20,14 +20,6 @@ let members = [
   {
     name: 'hjartans.neocities',
     url: 'https://hjartans.neocities.org/',
-  },
-  {
-    name: 'runesong.neocities',
-    url: 'https://runesong.neocities.org/',
-  },
-  {
-    name: 'myrrys',
-    url: 'https://myrrys.net/',
   },
 ];
 
@@ -86,7 +78,7 @@ export const getSite = (arg) => {
   const currentMember = members.find((member) => member.url.includes(host));
 
   if (!currentMember) {
-    // return res.sendStatus(404);
+    return res.sendStatus(404);
   }
 
   let redirUrl;
@@ -163,7 +155,9 @@ export class WebringBanner extends LitElement {
             class="info-link"
             >Webring Info</a
           >
-          <a target="_blank" href="https://myrrys.net/ds/webring/all"
+          <a
+            target="_blank"
+            href="https://toni-lappalainen.github.io/dswebring/all"
             >All Sites</a
           >
         </div>

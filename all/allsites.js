@@ -31,6 +31,10 @@ export let members = [
     name: 'self.github',
     url: 'https://toni-lappalainen.github.io/dswebring',
   },
+  {
+    name: 'dungeon-synth.neocities',
+    url: 'https://dungeon-synth.neocities.org/',
+  },
 ];
 
 const app = document.querySelector('#site-list');

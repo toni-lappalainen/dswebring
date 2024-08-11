@@ -15,6 +15,18 @@ export let members = [
     name: 'hjartans.neocities',
     url: 'https://hjartans.neocities.org/',
   },
+  {
+    name: 'siliarin.neocities',
+    url: 'https://siliarin.neocities.org/',
+  },
+  {
+    name: 'radiantscroll.neocities',
+    url: 'https://radiantscroll.neocities.org/',
+  },
+  {
+    name: 'sylfvr.art',
+    url: 'https://sylfvr.art/blog/',
+  },
 ];
 
 const app = document.querySelector('#site-list');

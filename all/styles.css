@@ -1,0 +1,23 @@
+body {
+  background-color: #000;
+  font-family: sans-serif;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+a {
+  color: #fa0000;
+  transition: color 0.1s;
+
+  &:hover {
+    color: #db0000;
+  }
+
+  &:active {
+    color: #fa0000;
+  }
+}

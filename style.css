@@ -20,27 +20,3 @@ h1 {
   color: rgb(182, 94, 229);
   text-align: center;
 }
-
-a {
-  color: #a30000;
-
-  &:hover {
-    color: #8a0000;
-  }
-
-  &:active {
-    color: #a30000;
-  }
-
-  &:visited {
-    color: #808080;
-  }
-}
-
-.all-sites {
-  font-size: 1.5em;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}

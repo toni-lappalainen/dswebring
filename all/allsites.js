@@ -27,6 +27,10 @@ export let members = [
     name: 'sylfvr.art',
     url: 'https://sylfvr.art/blog/',
   },
+  {
+    name: 'self.github',
+    url: 'https://toni-lappalainen.github.io/dswebring',
+  },
 ];
 
 const app = document.querySelector('#site-list');

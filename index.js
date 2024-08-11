@@ -75,8 +75,6 @@ export const getSite = (arg) => {
   return redirUrl;
 };
 
-const getData = () => {};
-
 export class WebringBanner extends LitElement {
   static styles = css`
     :host {

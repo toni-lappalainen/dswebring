@@ -23,7 +23,7 @@ inside your page's <body> tag, and then add this where you want the banner to be
 
 - Add `open-new` to make the links open to a new tab.
 - Add `title="your custom title"` to change the default title.
-- Add `banner="nick"` to change the default banner.
+- Add `banner="nick"` or `banner="simple"` to change the default banner.
 
 ## Simple Example
 

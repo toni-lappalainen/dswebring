@@ -323,9 +323,7 @@ const simpleBanner = () => {
     <style>
       .banner-simple {
         background: #e4d9c3;
-        border: 15px solid #bba67c;
-        border-top-color: #666;
-        border-left-color: #666;
+        border: 2px solid black;
         text-align: center;
         font: 100% system-ui, sans-serif;
         padding-bottom: 8px;

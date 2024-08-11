@@ -1,4 +1,4 @@
-import { members } from 'index.js';
+import { members } from './index.js';
 
 const app = document.querySelector('#site-list');
 

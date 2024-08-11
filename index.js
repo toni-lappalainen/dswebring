@@ -212,7 +212,7 @@ const defaultBanner = () => {
         flex-direction: column;
       }
       .img {
-        background-image: url('https://myrrys.net/webring/static/img/skull.gif');
+        background-image: url('./assets/img/skull.gif');
         background-size: contain;
         background-repeat: no-repeat;
         margin-top: 24px;
@@ -221,7 +221,7 @@ const defaultBanner = () => {
       }
       @media (prefers-reduced-motion: reduce) {
         .img {
-          background-image: url('https://myrrys.net/webring/static/img/skull_still.gif');
+          background-image: url('./assets/img/skull_still.gif');
         }
       }
     </style>
@@ -276,25 +276,25 @@ const nickBanner = () => {
         background-repeat: no-repeat;
       }
       #prevgif {
-        background-image: url('https://myrrys.net/webring/static/img/axprevious.gif');
+        background-image: url('./assets/img/axprevious.gif');
       }
       #randomgif {
         width: 50px;
         height: 134px;
-        background-image: url('https://myrrys.net/webring/static/img/torchrandom.gif');
+        background-image: url('./assets/img/torchrandom.gif');
       }
       #nextgif {
-        background-image: url('https://myrrys.net/webring/static/img/axnext.gif');
+        background-image: url('./assets/img/axnext.gif');
       }
       @media (prefers-reduced-motion: reduce) {
         #prevgif {
-          background-image: url('https://myrrys.net/webring/static/img/axprevious_still.gif');
+          background-image: url('./assets/img/axprevious_still.gif');
         }
         #randomgif {
-          background-image: url('https://myrrys.net/webring/static/img/torchrandom_still.gif');
+          background-image: url('./assets/img/torchrandom_still.gif');
         }
         #nextgif {
-          background-image: url('https://myrrys.net/webring/static/img/axnext_still.gif');
+          background-image: url('./assets/img/axnext_still.gif');
         }
       }
     </style>

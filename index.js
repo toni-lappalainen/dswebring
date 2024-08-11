@@ -35,7 +35,7 @@ const getRandom = (host) => {
   );
 
   if (otherMembers.length === 0) {
-    return res.sendStatus(404);
+    return '#';
   }
 
   const randomIndex = Math.floor(Math.random() * otherMembers.length);
@@ -77,11 +77,10 @@ export const getSite = (arg) => {
 
   const currentMember = members.find((member) => member.url.includes(host));
 
+  let redirUrl = '#';
   if (!currentMember) {
-    return res.sendStatus(404);
+    return redirUrl;
   }
-
-  let redirUrl;
 
   if (action === 'random') {
     redirUrl = getRandom(host);
@@ -89,9 +88,8 @@ export const getSite = (arg) => {
     redirUrl = getNext(currentMember);
   } else if (action === 'previous') {
     redirUrl = getPrevious(currentMember);
-  } else {
-    redirUrl = '#';
   }
+
   return redirUrl;
 };
 

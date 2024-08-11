@@ -9,7 +9,7 @@ Add this script:
 ```html {.codeline}
 <script
   type="module"
-  src="https://myrrys.net/webring/static/webring-banner.js"
+  src="https://toni-lappalainen.github.io/dswebring/index.js"
 ></script>
 ```
 
@@ -45,7 +45,7 @@ inside your page's <body> tag, and then add this where you want the banner to be
     </webring-banner>
     <script
       type="module"
-      src="https://myrrys.net/webring/static/webring-banner.js"
+      src="https://toni-lappalainen.github.io/dswebring/index.js"
     ></script>
   </body>
 </html>
@@ -57,7 +57,7 @@ This will render the banner like this:
     <webring-banner
       host-name="runesong.neocities" title="Totally Awesome Dungeon Synth Webring" open-new>
     </webring-banner>
-    <script type="module" src="https://myrrys.net/webring/static/webring-banner.js"></script>
+    <script type="module" src="https://toni-lappalainen.github.io/dswebring/index.js"></script>
   </body>
 
 Or with the `banner="nick"` attribute:
@@ -66,5 +66,5 @@ Or with the `banner="nick"` attribute:
     <webring-banner
       host-name="runesong.neocities" title="Totally Awesome Dungeon Synth Webring" open-new banner="nick">
     </webring-banner>
-    <script type="module" src="https://myrrys.net/webring/static/webring-banner.js"></script>
+    <script type="module" src="https://toni-lappalainen.github.io/dswebring/index.js"></script>
   </body>

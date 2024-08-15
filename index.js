@@ -64,6 +64,13 @@ export const getSite = (arg) => {
     return redirUrl;
   }
 
+  // remove 'localhost' from members
+  members.splice(
+    members.findIndex((member) => member.name === 'localhost'),
+    1
+  );
+  console.log(members);
+
   if (action === 'random') {
     redirUrl = getRandom(host);
   } else if (action === 'next') {

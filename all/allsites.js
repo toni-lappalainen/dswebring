@@ -28,10 +28,6 @@ export const members = [
     url: 'https://sylfvr.art/blog/',
   },
   {
-    name: 'self.github',
-    url: 'https://toni-lappalainen.github.io/dswebring/',
-  },
-  {
     name: 'dungeon-synth.neocities',
     url: 'https://dungeon-synth.neocities.org/',
   },
@@ -39,12 +35,24 @@ export const members = [
     name: 'woodenvessels.neocities',
     url: 'https://woodenvessels.neocities.org/',
   },
+  {
+    name: 'miguelmolins.geocities',
+    url: 'https://www.geocities.ws/miguelmolins/',
+  },
+  {
+    name: 'localhost',
+    url: 'localhost',
+  },
+  {
+    name: 'self.github',
+    url: 'https://toni-lappalainen.github.io/dswebring/',
+  },
 ];
 
 const app = document.querySelector('#site-list');
 if (app) {
   for (const member of members) {
-    if (member.name === 'self.github') {
+    if (member.name === 'self.github' || member.name === 'localhost') {
       continue;
     }
     const site = document.createElement('li');

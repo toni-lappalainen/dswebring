@@ -8,12 +8,14 @@ import { members } from './all/allsites.js';
 
 let info, title, target, links, isChecked, bg, style;
 
+const filteredMembers = members.filter((member) => member.name !== 'localhost');
+
 const getCurrentURL = () => {
   return window.location.href;
 };
 
 const getRandom = (host) => {
-  const otherMembers = members.filter(
+  const otherMembers = filteredMembers.filter(
     (member) => !isSameDomain(member.url, host)
   );
 
@@ -26,21 +28,21 @@ const getRandom = (host) => {
 };
 
 const getNext = (currentMember) => {
-  const currentIndex = members.indexOf(currentMember);
+  const currentIndex = filteredMembers.indexOf(currentMember);
   const nextIndex = (currentIndex + 1) % members.length;
-  return members[nextIndex].url;
+  return filteredMembers[nextIndex].url;
 };
 
 const getPrevious = (currentMember) => {
-  const currentIndex = members.indexOf(currentMember);
+  const currentIndex = filteredMembers.indexOf(currentMember);
   const previousIndex = (currentIndex + members.length - 1) % members.length;
-  return members[previousIndex].url;
+  return filteredMembers[previousIndex].url;
 };
 
 const isSameDomain = (url1, url2) => {
-  const domain1 = getDomain(url1);
+  const domain1 = url1;
   const domain2 = getDomain(url2);
-  return domain1 === domain2;
+  return domain2.includes(domain1);
 };
 
 const getDomain = (url) => {
@@ -57,19 +59,12 @@ const getDomain = (url) => {
 export const getSite = (arg) => {
   const host = getCurrentURL();
   const action = arg;
-  const currentMember = members.find((member) => member.url.includes(host));
+  const currentMember = members.find((member) => host.includes(member.url));
 
   let redirUrl = '#';
   if (!currentMember) {
     return redirUrl;
   }
-
-  // remove 'localhost' from members
-  members.splice(
-    members.findIndex((member) => member.name === 'localhost'),
-    1
-  );
-  console.log(members);
 
   if (action === 'random') {
     redirUrl = getRandom(host);

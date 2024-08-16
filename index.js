@@ -29,14 +29,17 @@ const getRandom = (host) => {
 
 const getNext = (currentMember) => {
   const currentIndex = filteredMembers.indexOf(currentMember);
-  const nextIndex = (currentIndex + 1) % members.length;
-  return filteredMembers[nextIndex].url;
+  const nextIndex = (currentIndex + 1) % filteredMembers.length;
+  return filteredMembers[nextIndex] ? filteredMembers[nextIndex].url : '#';
 };
 
 const getPrevious = (currentMember) => {
   const currentIndex = filteredMembers.indexOf(currentMember);
-  const previousIndex = (currentIndex + members.length - 1) % members.length;
-  return filteredMembers[previousIndex].url;
+  const previousIndex =
+    (currentIndex + filteredMembers.length - 1) % filteredMembers.length;
+  return filteredMembers[previousIndex]
+    ? filteredMembers[previousIndex].url
+    : '#';
 };
 
 const isSameDomain = (url1, url2) => {

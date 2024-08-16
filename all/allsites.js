@@ -36,16 +36,16 @@ export const members = [
     url: 'https://woodenvessels.neocities.org/',
   },
   {
+    name: 'self.github',
+    url: 'https://toni-lappalainen.github.io/dswebring/',
+  },
+  {
     name: 'miguelmolins.geocities',
     url: 'https://www.geocities.ws/miguelmolins/',
   },
   {
     name: 'localhost',
     url: 'localhost',
-  },
-  {
-    name: 'self.github',
-    url: 'https://toni-lappalainen.github.io/dswebring/',
   },
 ];
 

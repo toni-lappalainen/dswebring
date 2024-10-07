@@ -44,6 +44,10 @@ export const members = [
     url: 'https://www.geocities.ws/miguelmolins/',
   },
   {
+    name: 'observandum.geocities',
+    url: 'https://observandum.neocities.org/',
+  },
+  {
     name: 'localhost',
     url: 'localhost',
   },

@@ -92,7 +92,10 @@ export class WebringBanner extends LitElement {
       padding-top: 10px;
     }
     .info-link {
-      margin-right: 10px;
+      align-items: center;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
     }
   `;
 

@@ -190,7 +190,7 @@ const defaultBanner = () => {
         font-size: 24px;
         font-weight: bold;
         text-align: center;
-        padding: 8px;
+        padding: 8px 30px;
       }
       .content {
         margin: 0 auto;

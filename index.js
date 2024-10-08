@@ -192,37 +192,49 @@ const defaultBanner = () => {
         text-align: center;
         padding: 8px;
       }
-      .links {
-        font-size: 20px;
-        padding: 12px;
-      }
       .container {
         display: flex; /* or inline-flex */
         flex-direction: row;
-        justify-content: space-around;
+        position: relative;
       }
       .content {
         flex-direction: column;
+        margin: 0 auto;
       }
-      .img {
+      .links {
+        font-size: 20px;
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .links::before,
+      .links::after {
+        display: block;
+        content: '';
         background-image: url('https://toni-lappalainen.github.io/dswebring/assets/img/skull.gif');
         background-size: contain;
         background-repeat: no-repeat;
-        margin-top: 24px;
         width: 32px;
         height: 32px;
+        position: absolute;
+      }
+      .links::before {
+        left: 30px;
+      }
+      .links::after {
+        right: 30px;
       }
       @media (prefers-reduced-motion: reduce) {
-        .img {
+        .links::before,
+        .links::after {
           background-image: url('https://toni-lappalainen.github.io/dswebring/assets/img/skull_still.gif');
         }
       }
     </style>
     <div class="banner-default">
       <div class="title">${title}</div>
-
       <div class="container">
-        <div class="img" alt="Dungeon Synth Webring"></div>
         <div class="content">
           <div class="links">
             <a href="${links.prev}" target="${target}"> [Prev]</a>
@@ -231,7 +243,6 @@ const defaultBanner = () => {
           </div>
           ${info}
         </div>
-        <div class="img" alt="Dungeon Synth Webring"></div>
       </div>
     </div>
   `;

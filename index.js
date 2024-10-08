@@ -91,7 +91,7 @@ export class WebringBanner extends LitElement {
       font-size: 14px;
       padding-top: 10px;
     }
-    .info-link {
+    .info-links {
       align-items: center;
       display: flex;
       gap: 10px;
@@ -138,11 +138,10 @@ export class WebringBanner extends LitElement {
 
     info = html`
       <div class="info">
-        <div class="info-link">
+        <div class="info-links">
           <a
             target="_blank"
             href="https://github.com/toni-lappalainen/dswebring"
-            class="info-link"
             >Webring Info</a
           >
           <a

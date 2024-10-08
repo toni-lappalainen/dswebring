@@ -238,15 +238,13 @@ const defaultBanner = () => {
     </style>
     <div class="banner-default">
       <div class="title">${title}</div>
-      <div class="container">
-        <div class="content">
-          <div class="links">
-            <a href="${links.prev}" target="${target}"> [Prev]</a>
-            <a href="${links.random}" target="${target}"> [Random]</a>
-            <a href="${links.next}" target="${target}">[Next]</a>
-          </div>
-          ${info}
+      <div class="content">
+        <div class="links">
+          <a href="${links.prev}" target="${target}"> [Prev]</a>
+          <a href="${links.random}" target="${target}"> [Random]</a>
+          <a href="${links.next}" target="${target}">[Next]</a>
         </div>
+        ${info}
       </div>
     </div>
   `;

@@ -192,21 +192,18 @@ const defaultBanner = () => {
         text-align: center;
         padding: 8px;
       }
-      .container {
-        display: flex; /* or inline-flex */
-        flex-direction: row;
-        position: relative;
-      }
       .content {
-        flex-direction: column;
         margin: 0 auto;
       }
       .links {
         align-items: center;
         display: flex;
+        flex-direction: column;
         font-size: 20px;
         gap: 6px;
+        justify-content: center;
         padding: 12px;
+        position: relative;
       }
       .links::before,
       .links::after {
@@ -216,7 +213,9 @@ const defaultBanner = () => {
         content: '';
         display: block;
         height: 32px;
+        margin-top: -16px;
         position: absolute;
+        top: 50%;
         width: 32px;
       }
       .links::before {
@@ -229,6 +228,11 @@ const defaultBanner = () => {
         .links::before,
         .links::after {
           background-image: url('https://toni-lappalainen.github.io/dswebring/assets/img/skull_still.gif');
+        }
+      }
+      @media (min-width: 420px) {
+        .links {
+          flex-direction: row;
         }
       }
     </style>

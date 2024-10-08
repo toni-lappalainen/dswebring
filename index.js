@@ -36,7 +36,7 @@ const getNext = (currentMember) => {
 const getPrevious = (currentMember) => {
   const currentIndex = filteredMembers.indexOf(currentMember);
   const previousIndex =
-    (currentIndex + filteredMembers.length - 1) % filteredMembers.length;
+        (currentIndex + filteredMembers.length - 1) % filteredMembers.length;
   return filteredMembers[previousIndex]
     ? filteredMembers[previousIndex].url
     : '#';
@@ -91,8 +91,11 @@ export class WebringBanner extends LitElement {
       font-size: 14px;
       padding-top: 10px;
     }
-    .info-link {
-      margin-right: 10px;
+    .info-links {
+      align-items: center;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
     }
   `;
 
@@ -112,7 +115,7 @@ export class WebringBanner extends LitElement {
 
     if (
       this.hasAttribute('open-new') &&
-      localStorage.getItem('openInTab') === null
+        localStorage.getItem('openInTab') === null
     ) {
       target = '_blank';
       isChecked = true;
@@ -126,8 +129,8 @@ export class WebringBanner extends LitElement {
       else target = '_self';
 
       const links = this.renderRoot
-        .querySelector('.links')
-        .querySelectorAll('a');
+            .querySelector('.links')
+            .querySelectorAll('a');
       links.forEach((link) => {
         link.setAttribute('target', target);
       });
@@ -135,11 +138,10 @@ export class WebringBanner extends LitElement {
 
     info = html`
       <div class="info">
-        <div class="info-link">
+        <div class="info-links">
           <a
             target="_blank"
             href="https://github.com/toni-lappalainen/dswebring"
-            class="info-link"
             >Webring Info</a
           >
           <a
@@ -180,58 +182,71 @@ const defaultBanner = () => {
       .banner-default {
         background: #d7d7d7;
         border: 15px solid #222;
-        border-top-color: #666;
         border-left-color: #666;
-        text-align: center;
+        border-top-color: #666;
         font: 100% system-ui, sans-serif;
         padding-bottom: 8px;
+        text-align: center;
       }
       .title {
         font-size: 24px;
         font-weight: bold;
         text-align: center;
-        padding: 8px;
-      }
-      .links {
-        font-size: 20px;
-        padding: 12px;
-      }
-      .container {
-        display: flex; /* or inline-flex */
-        flex-direction: row;
-        justify-content: space-around;
+        padding: 8px 30px;
       }
       .content {
-        flex-direction: column;
+        margin: 0 auto;
       }
-      .img {
+      .links {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        gap: 6px;
+        justify-content: center;
+        padding: 12px;
+        position: relative;
+      }
+      .links::before,
+      .links::after {
         background-image: url('https://toni-lappalainen.github.io/dswebring/assets/img/skull.gif');
-        background-size: contain;
         background-repeat: no-repeat;
-        margin-top: 24px;
-        width: 32px;
+        background-size: contain;
+        content: '';
+        display: block;
         height: 32px;
+        margin-top: -16px;
+        position: absolute;
+        top: 50%;
+        width: 32px;
+      }
+      .links::before {
+        left: 30px;
+      }
+      .links::after {
+        right: 30px;
       }
       @media (prefers-reduced-motion: reduce) {
-        .img {
+        .links::before,
+        .links::after {
           background-image: url('https://toni-lappalainen.github.io/dswebring/assets/img/skull_still.gif');
+        }
+      }
+      @media (min-width: 420px) {
+        .links {
+          flex-direction: row;
         }
       }
     </style>
     <div class="banner-default">
       <div class="title">${title}</div>
-
-      <div class="container">
-        <div class="img" alt="Dungeon Synth Webring"></div>
-        <div class="content">
-          <div class="links">
-            <a href="${links.prev}" target="${target}"> [Prev]</a>
-            <a href="${links.random}" target="${target}"> [Random]</a>
-            <a href="${links.next}" target="${target}">[Next]</a>
-          </div>
-          ${info}
+      <div class="content">
+        <div class="links">
+          <a href="${links.prev}" target="${target}"> [Prev]</a>
+          <a href="${links.random}" target="${target}"> [Random]</a>
+          <a href="${links.next}" target="${target}">[Next]</a>
         </div>
-        <div class="img" alt="Dungeon Synth Webring"></div>
+        ${info}
       </div>
     </div>
   `;

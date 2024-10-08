@@ -180,11 +180,11 @@ const defaultBanner = () => {
       .banner-default {
         background: #d7d7d7;
         border: 15px solid #222;
-        border-top-color: #666;
         border-left-color: #666;
-        text-align: center;
+        border-top-color: #666;
         font: 100% system-ui, sans-serif;
         padding-bottom: 8px;
+        text-align: center;
       }
       .title {
         font-size: 24px;
@@ -202,22 +202,22 @@ const defaultBanner = () => {
         margin: 0 auto;
       }
       .links {
-        font-size: 20px;
-        padding: 12px;
-        display: flex;
         align-items: center;
+        display: flex;
+        font-size: 20px;
         gap: 6px;
+        padding: 12px;
       }
       .links::before,
       .links::after {
-        display: block;
-        content: '';
         background-image: url('https://toni-lappalainen.github.io/dswebring/assets/img/skull.gif');
-        background-size: contain;
         background-repeat: no-repeat;
-        width: 32px;
+        background-size: contain;
+        content: '';
+        display: block;
         height: 32px;
         position: absolute;
+        width: 32px;
       }
       .links::before {
         left: 30px;

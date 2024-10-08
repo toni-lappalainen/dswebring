@@ -36,7 +36,7 @@ const getNext = (currentMember) => {
 const getPrevious = (currentMember) => {
   const currentIndex = filteredMembers.indexOf(currentMember);
   const previousIndex =
-    (currentIndex + filteredMembers.length - 1) % filteredMembers.length;
+        (currentIndex + filteredMembers.length - 1) % filteredMembers.length;
   return filteredMembers[previousIndex]
     ? filteredMembers[previousIndex].url
     : '#';
@@ -112,7 +112,7 @@ export class WebringBanner extends LitElement {
 
     if (
       this.hasAttribute('open-new') &&
-      localStorage.getItem('openInTab') === null
+        localStorage.getItem('openInTab') === null
     ) {
       target = '_blank';
       isChecked = true;
@@ -126,8 +126,8 @@ export class WebringBanner extends LitElement {
       else target = '_self';
 
       const links = this.renderRoot
-        .querySelector('.links')
-        .querySelectorAll('a');
+            .querySelector('.links')
+            .querySelectorAll('a');
       links.forEach((link) => {
         link.setAttribute('target', target);
       });

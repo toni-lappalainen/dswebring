@@ -48,6 +48,10 @@ export const members = [
     url: 'https://observandum.neocities.org/',
   },
   {
+    name: 'blekmusik.neocities',
+    url: 'https://blekmusik.neocities.org/',
+  },
+  {
     name: 'localhost',
     url: 'localhost',
   },

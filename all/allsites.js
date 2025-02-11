@@ -23,10 +23,12 @@ export const members = [
     name: 'radiantscroll.neocities',
     url: 'https://radiantscroll.neocities.org/',
   },
+  /*
   {
     name: 'sylfvr.art',
     url: 'https://sylfvr.art/blog/',
   },
+  */
   {
     name: 'dungeon-synth.neocities',
     url: 'https://dungeon-synth.neocities.org/',
@@ -39,10 +41,12 @@ export const members = [
     name: 'self.github',
     url: 'https://toni-lappalainen.github.io/dswebring/',
   },
+  /*
   {
     name: 'miguelmolins.geocities',
     url: 'https://www.geocities.ws/miguelmolins/',
   },
+  */
   {
     name: 'observandum.neocities',
     url: 'https://observandum.neocities.org/',

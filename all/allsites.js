@@ -1,4 +1,5 @@
 export const members = [
+  /*
   {
     name: 'desolationplains.neocities',
     url: 'https://desolationplains.neocities.org/',
@@ -7,6 +8,7 @@ export const members = [
     name: 'thedungeonmusicshoppe',
     url: 'https://thedungeonmusicshoppe.com/',
   },
+  */
   {
     name: 'thewillowtea.neocities',
     url: 'http://thewillowtea.neocities.org/',
@@ -15,10 +17,12 @@ export const members = [
     name: 'hjartans.neocities',
     url: 'https://hjartans.neocities.org/',
   },
+  /*
   {
     name: 'siliarin.neocities',
     url: 'https://siliarin.neocities.org/',
   },
+  */
   {
     name: 'radiantscroll.neocities',
     url: 'https://radiantscroll.neocities.org/',

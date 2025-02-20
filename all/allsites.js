@@ -60,6 +60,10 @@ export const members = [
     url: 'https://blekmusik.neocities.org/',
   },
   {
+    name: 'dungeonsynthevents.neocities',
+    url: 'https://dungeonsynthevents.neocities.org/',
+  },
+  {
     name: 'localhost',
     url: 'localhost',
   },
